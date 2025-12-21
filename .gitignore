@@ -1,0 +1,22 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Node / npm (caso use futuramente)
+node_modules/
+
+# VS Code
+.vscode/
+
+# Ambiente local / testes
+.env
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Backup de arquivos
+*.bak

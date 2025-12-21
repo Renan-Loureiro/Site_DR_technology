@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato - DR Tecnologia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">DR Tecnologia</a>
+            <nav class="nav">
+                <ul>
+                    <a href="index.html">Início</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="contato.html">Contato</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<section class="contato container">
+    <h2>Solicitação de Orçamento</h2>
+
+    <p style="text-align:center; margin-bottom: 30px;">
+        Preencha o formulário abaixo e nossa equipe entrará em contato.
+    </p>
+
+    <form class="contato-form" id="form-orcamento">
+        <input type="text" placeholder="Nome completo" required>
+        <input type="email" placeholder="E-mail" required>
+        <input type="tel" placeholder="Telefone / WhatsApp" required>
+
+        <select required>
+            <option value="">Selecione o serviço desejado</option>
+            <option>Instalação de Rede Estruturada</option>
+            <option>Infraestrutura de Redes (Switches)</option>
+            <option>Instalação de Câmeras de Segurança (CFTV)</option>
+            <option>Soluções Residenciais e Prediais</option>
+            <option>Interfones e Vídeo Porteiros</option>
+            <option>Redes Wireless</option>
+            <option>Outros Assuntos</option>
+        </select>
+
+        <textarea rows="4" 
+        placeholder="Descreva sua necessidade ou outros detalhes importantes">
+        </textarea>
+
+        <button class="btn" type="submit">Solicitar Orçamento</button>
+    </form>
+</section>
+
+        <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>© 2025 DR Tecnologia — Todos os direitos reservados.</p>
+    </footer>
+
+<script src="js/whatsapp.js"></script>
+</body>
+</html>
