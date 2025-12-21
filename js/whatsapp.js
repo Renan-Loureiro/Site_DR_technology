@@ -26,7 +26,7 @@ ${mensagem}
         `;
 
         // TROQUE PELO NÚMERO REAL DA EMPRESA
-        const numeroWhatsApp = "5513996480457";
+        const numeroWhatsApp = "9999999999999";
 
         const url =
             "https://wa.me/" +
