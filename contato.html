@@ -29,11 +29,11 @@
     </p>
 
     <form class="contato-form" id="form-orcamento">
-        <input type="text" placeholder="Nome completo" required>
-        <input type="email" placeholder="E-mail" required>
-        <input type="tel" placeholder="Telefone / WhatsApp" required>
+        <input type="text" id="nome" placeholder="Nome completo" required>
+        <input type="email" id="email" placeholder="E-mail" required>
+        <input type="tel" id="telefone" placeholder="Telefone / WhatsApp" required>
 
-        <select required>
+        <select id="servico" required>
             <option value="">Selecione o serviço desejado</option>
             <option>Instalação de Rede Estruturada</option>
             <option>Infraestrutura de Redes (Switches)</option>
@@ -44,11 +44,13 @@
             <option>Outros Assuntos</option>
         </select>
 
-        <textarea rows="4" 
+        <textarea rows="4" id="mensagem"
         placeholder="Descreva sua necessidade ou outros detalhes importantes">
         </textarea>
 
-        <button class="btn" type="submit">Solicitar Orçamento</button>
+       <button class="btn" type="submit">
+            Solicitar Orçamento
+       </button>
     </form>
 </section>
 
