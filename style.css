@@ -6,9 +6,10 @@
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
+/* ===== BASE ===== */
 body {
-    background-color: #f5f7fa;
-    color: #333;
+    background: #0f172a; /* azul escuro tech */
+    color: #e5e7eb;
     line-height: 1.6;
 }
 
@@ -22,27 +23,17 @@ body {
 /* ===== HEADER ===== */
 .header {
     background: linear-gradient(
-        to right,
+        90deg,
+        #020617,
         #0a3d62,
-        #3c6382,
-        #ffffff
+        #020617
     );
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 100;
 }
-
-
-/* .header {
-    background: #ffffff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-} */
 
 .header .container {
     display: flex;
@@ -54,7 +45,7 @@ body {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.5rem;
-    color: #007bff;
+    color: #ffffff;
 }
 
 .nav ul {
@@ -65,59 +56,37 @@ body {
 
 .nav a {
     text-decoration: none;
-    color: #333;
+    color: #e5e7eb;
     font-weight: 500;
     transition: 0.3s;
 }
 
 .nav a:hover {
-    color: #007bff;
+    color: #38bdf8;
 }
 
-/* ===== HERO ===== */
-.hero {
-    height: 80vh;
-    background: linear-gradient(135deg, #0a3d62, #3c6382);
-    /* background: url('imagem_principal.jpg') no-repeat center  center/cover; */
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    color: #fff;
-}
-.hero::after{
-    content: "";
+/* ===== HEADER TRANSPARENTE (HOME) ===== */
+.header-transparent {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    /*background: rgba(0, 0, 0.55);*/
-    backdrop-filter: blur(1px);
+    background: transparent;
+    box-shadow: none;
+    z-index: 10;
 }
 
-.hero-content{
-    position: relative;
-    z-index: 2;
+.header-transparent .logo,
+.header-transparent .nav a {
+    color: #ffffff;
 }
 
-.hero h1 {
-    font-size: 2.8rem;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 25px;
-}
-
+/* ===== BOTÕES ===== */
 .btn {
     display: inline-block;
-    padding: 12px 25px;
+    padding: 12px 28px;
     background: #007bff;
-    color: #fff;
+    color: #ffffff;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
@@ -128,28 +97,77 @@ body {
     background: #0056b3;
 }
 
-/* ===== SERVIÇOS ===== */
-.servicos {
-    padding: 80px 0;
+/* ================================================= */
+/* ================= HERO COM VÍDEO ================= */
+/* ================================================= */
+
+.hero-video {
+    position: relative;
+    min-height: 140vh; /* hero estendido */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
-.servicos h2 {
+.hero-video video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 15, 30, 0.75);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    color: #ffffff;
+}
+
+/* ===== HERO TOPO ===== */
+.hero-top {
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
+    padding: 0 20px;
 }
 
+.hero-top h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero-top p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+/* ===== SERVIÇOS DENTRO DO HERO ===== */
+.hero-servicos {
+    text-align: center;
+}
+
+.hero-servicos h2 {
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+}
+
+/* ===== GRID ===== */
 .servicos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
 }
 
+/* ===== CARD BASE ===== */
 .servico-item {
-    background: #ffffff;
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     transition: 0.3s;
 }
 
@@ -157,48 +175,61 @@ body {
     transform: translateY(-5px);
 }
 
-.servico-item h3 {
+/* ===== CARD GLASS (HOME) ===== */
+.servico-item.glass {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+}
+
+.servico-item.glass h3 {
     margin-bottom: 10px;
-    color: #007bff;
+    color: #38bdf8;
 }
 
-/* ===== SOBRE ===== */
-.sobre {
-    background: #ffffff;
-    padding: 80px 0;
-    text-align: center;
+.servico-item.glass p {
+    color: #e5e7eb;
 }
 
-.sobre h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+/* ================================================= */
+/* ============== PÁGINAS INTERNAS ================= */
+/* ================================================= */
+
+.page-content {
+    background: #f8fafc;
+    color: #111827;
+    border-radius: 24px;
+    padding: 60px;
+    max-width: 1200px;
+    margin: 100px auto;
 }
 
-.sobre p {
-    max-width: 800px;
-    margin: auto;
-    font-size: 1.1rem;
-}
-
-/* ===== CONTATO ===== */
-.contato {
-    padding: 80px 0;
-}
-
-.contato h2 {
+.page-content h2 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 40px;
 }
 
-.contato-info {
-    text-align: center;
-    margin-bottom: 30px;
+/* ===== CARDS INTERNOS ===== */
+.page-content .servico-item {
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    color: #111827;
 }
 
-.contato-info p {
-    margin-bottom: 10px;
-    font-size: 1.1rem;
+.page-content .servico-item h3 {
+    color: #007bff;
+}
+
+/* ===== SOBRE ===== */
+.sobre {
+    background: transparent;
+}
+
+/* ===== CONTATO ===== */
+.contato {
+    background: transparent;
 }
 
 .contato-form {
@@ -210,32 +241,42 @@ body {
 }
 
 .contato-form input,
-.contato-form textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-}
-
-.contato-form button {
-    border: none;
-    cursor: pointer;
-}
-
+.contato-form textarea,
 .contato-form select {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 1rem;
-    background-color: #fff;
 }
-
 
 /* ===== FOOTER ===== */
 .footer {
-    background: #0a3d62;
-    color: #fff;
+    background: #020617;
+    color: #ffffff;
     text-align: center;
     padding: 20px;
     margin-top: 40px;
+}
+
+/* ================================================= */
+/* ================= RESPONSIVO ===================== */
+/* ================================================= */
+
+@media (max-width: 768px) {
+    .hero-video {
+        min-height: 160vh;
+    }
+
+    .hero-top h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-servicos h2 {
+        font-size: 1.8rem;
+    }
+
+    .page-content {
+        padding: 40px 25px;
+        margin: 60px auto;
+    }
 }
