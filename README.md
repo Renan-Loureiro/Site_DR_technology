@@ -3,7 +3,7 @@
 Site institucional da **DR Tecnologia**, focado em soluções de:
 
 - Redes estruturadas
-- Infraestrutura de redes (Switches)
+- Infraestrutura de redes (Switches e cabeamento)
 - Redes Wireless
 - CFTV e segurança eletrônica
 - Interfones e vídeo porteiros
@@ -16,7 +16,7 @@ Site institucional da **DR Tecnologia**, focado em soluções de:
 
 ## 🌐 Publicação
 - GitHub Pages (ambiente de testes)
-- Hostinger (produção – em andamento)
+- DNS gerenciado pelo Registro.br
 
 ## 📞 Contato
 Solicitações de orçamento via formulário com integração ao WhatsApp.
