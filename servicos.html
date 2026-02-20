@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <title>Serviços - DR Tecnologia</title>
@@ -7,13 +8,16 @@
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3BP31KQYPR"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-3BP31KQYPR');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-3BP31KQYPR');
     </script>
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -32,28 +36,34 @@
     </header>
 
     <section class="servicos container">
-        <h2>Todos os Serviços</h2>
-        
+        <div class="servicos-header">
+            <h2>Todos os Serviços</h2>
+            <p>Soluções completas com tecnologia de ponta para sua empresa ou residência.</p>
+        </div>
+
         <div class="servicos-grid">
 
-            <div class="servico-item">
-                <h3> Instalação de Rede Estruturada</h3>
+            <div class="servico-item glass">
+                <i class="fa-solid fa-network-wired servico-icon"></i>
+                <h3>Instalação de Rede Estruturada</h3>
                 <p>
-                    Planejamento e implantação de redes cabeados com padrão 
-                    profissional, garantindo organização, desempenho e 
+                    Planejamento e implantação de redes cabeadas com padrão
+                    profissional, garantindo organização, desempenho e
                     confiabilidade.
                 </p>
             </div>
 
-            <div class="servico-item">
-                <h3>Instalação de Câmeras de Segurança (CFTV)</h3>
+            <div class="servico-item glass">
+                <i class="fa-solid fa-video servico-icon"></i>
+                <h3>Instalação de Câmeras (CFTV)</h3>
                 <p>
                     Implantação de sistemas de monitoramento com câmeras IP ou analógicas,
                     acesso remoto, gravação e manutenção.
                 </p>
             </div>
 
-            <div class="servico-item">
+            <div class="servico-item glass">
+                <i class="fa-solid fa-building-shield servico-icon"></i>
                 <h3>Soluções Residenciais e Prediais</h3>
                 <p>
                     Atendemos residências, condomínios e prédios comerciais,
@@ -61,7 +71,8 @@
                 </p>
             </div>
 
-            <div class="servico-item">
+            <div class="servico-item glass">
+                <i class="fa-solid fa-door-open servico-icon"></i>
                 <h3>Interfones e Vídeo Porteiros</h3>
                 <p>
                     Instalação e configuração de interfones e vídeo porteiros,
@@ -69,21 +80,22 @@
                 </p>
             </div>
 
-
-            <div class="servico-item">
-                <h3>Redes Wirelesss</h3>
+            <div class="servico-item glass">
+                <i class="fa-solid fa-wifi servico-icon"></i>
+                <h3>Redes Wireless</h3>
                 <p>
-                    Wi-Fi corporativo, redes mesh, 
+                    Wi-Fi corporativo, redes mesh,
                     planejamento e implantação técnica.
                 </p>
-            </div>            
+            </div>
 
         </div>
     </section>
 
-        <!-- ===== FOOTER ===== -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <p>© 2025 DR Tecnologia — Todos os direitos reservados.</p>
     </footer>
 </body>
+
 </html>

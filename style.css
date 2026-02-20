@@ -8,9 +8,13 @@
 
 /* ===== BASE ===== */
 body {
-    background: #0f172a; /* azul escuro tech */
+    background: #0f172a;
+    /* azul escuro tech */
     color: #e5e7eb;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* ===== CONTAINER ===== */
@@ -23,13 +27,11 @@ body {
 
 /* ===== HEADER ===== */
 .header {
-    background: linear-gradient(
-        90deg,
-        #020617,
-        #0a3d62,
-        #020617
-    );
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    background: linear-gradient(90deg,
+            #020617,
+            #0a3d62,
+            #020617);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     padding: 15px 0;
     position: sticky;
     top: 0;
@@ -47,7 +49,8 @@ body {
     font-weight: bold;
     font-size: 1.4rem;
     color: #ffffff;
-    white-space: nowrap; /*impede de quebrar linha */
+    white-space: nowrap;
+    /*impede de quebrar linha */
 }
 
 .nav ul {
@@ -105,7 +108,8 @@ body {
 
 .hero-video {
     position: relative;
-    min-height: 140vh; /* hero estendido */
+    min-height: 140vh;
+    /* hero estendido */
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -130,6 +134,8 @@ body {
     z-index: 2;
     width: 100%;
     color: #ffffff;
+    padding-bottom: 80px;
+    /* Evita que o footer sobreponha o conteúdo em telas menores */
 }
 
 /* ===== HERO TOPO ===== */
@@ -179,10 +185,11 @@ body {
 
 /* ===== CARD GLASS (HOME) ===== */
 .servico-item.glass {
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     color: #ffffff;
+    text-align: center;
 }
 
 .servico-item.glass h3 {
@@ -192,6 +199,43 @@ body {
 
 .servico-item.glass p {
     color: #e5e7eb;
+}
+
+.servico-item.glass:hover {
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+    border-color: rgba(56, 189, 248, 0.5);
+    transform: translateY(-5px);
+}
+
+.servico-icon {
+    font-size: 2.8rem;
+    color: #38bdf8;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.servico-item.glass:hover .servico-icon {
+    transform: scale(1.1);
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(56, 189, 248, 0.8);
+}
+
+.servicos-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.servicos-header h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.servicos-header p {
+    color: #94a3b8;
+    font-size: 1.1rem;
 }
 
 /* ================================================= */
@@ -216,7 +260,7 @@ body {
 /* ===== CARDS INTERNOS ===== */
 .page-content .servico-item {
     background: #ffffff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     color: #111827;
 }
 
@@ -227,11 +271,16 @@ body {
 /* ===== SOBRE ===== */
 .sobre {
     background: transparent;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
-/* ===== CONTATO ===== */
-.contato {
+/* ===== CONTATO E SERVIÇOS ===== */
+.contato,
+.servicos {
     background: transparent;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .contato-form {
@@ -257,7 +306,16 @@ body {
     color: #ffffff;
     text-align: center;
     padding: 20px;
-    margin-top: 40px;
+    margin-top: auto;
+}
+
+.footer-transparent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 10;
 }
 
 /* ================================================= */
@@ -275,10 +333,12 @@ body {
     .logo-full {
         display: none;
     }
-    .logo-short{
+
+    .logo-short {
         display: inline;
         font-size: 1.6rem;
     }
+
     .hero-video {
         min-height: 160vh;
     }
