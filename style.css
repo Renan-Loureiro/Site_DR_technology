@@ -330,17 +330,38 @@ body {
 }
 
 @media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 5px;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav a {
+        font-size: 0.95rem;
+    }
+
     .logo-full {
         display: none;
     }
 
     .logo-short {
         display: inline;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     .hero-video {
         min-height: 160vh;
+        align-items: flex-start;
+    }
+
+    .hero-content {
+        padding-top: 140px;
     }
 
     .hero-top h1 {
