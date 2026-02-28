@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header header-transparent">
         <div class="container">
             <a href="index.html" class="logo">
                 <span class="logo-full">DR Tecnologia</span>
@@ -37,42 +37,50 @@
         </div>
     </header>
 
-    <section class="contato container">
-        <h2>Solicitação de Orçamento</h2>
+    <section class="hero-video">
+        <video autoplay muted loop playsinline>
+            <source src="videos/background_movel.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
 
-        <p style="text-align:center; margin-bottom: 30px;">
-            Preencha o formulário abaixo e nossa equipe entrará em contato.
-        </p>
+        <div class="hero-content">
+            <section class="contato container">
+                <h2 style="text-align:center;">Solicitação de Orçamento</h2>
 
-        <form class="contato-form" id="form-orcamento">
-            <input type="text" id="nome" placeholder="Nome completo" required>
-            <input type="email" id="email" placeholder="E-mail" required>
-            <input type="tel" id="telefone" placeholder="Telefone / WhatsApp" required>
+                <p style="text-align:center; margin-bottom: 30px;">
+                    Preencha o formulário abaixo e nossa equipe entrará em contato.
+                </p>
 
-            <select id="servico" required>
-                <option value="">Selecione o serviço desejado</option>
-                <option>Instalação de Rede Estruturada</option>
-                <option>Infraestrutura de Redes (Switches)</option>
-                <option>Instalação de Câmeras de Segurança (CFTV)</option>
-                <option>Soluções Residenciais e Prediais</option>
-                <option>Interfones e Vídeo Porteiros</option>
-                <option>Redes Wireless</option>
-                <option>Outros Assuntos</option>
-            </select>
+                <form class="contato-form" id="form-orcamento">
+                    <input type="text" id="nome" placeholder="Nome completo" required>
+                    <input type="email" id="email" placeholder="E-mail" required>
+                    <input type="tel" id="telefone" placeholder="Telefone / WhatsApp" required>
 
-            <textarea rows="4" id="mensagem"
-                placeholder="Descreva sua necessidade ou outros detalhes importantes"></textarea>
+                    <select id="servico" required>
+                        <option value="">Selecione o serviço desejado</option>
+                        <option>Instalação de Rede Estruturada</option>
+                        <option>Infraestrutura de Redes (Switches)</option>
+                        <option>Instalação de Câmeras de Segurança (CFTV)</option>
+                        <option>Soluções Residenciais e Prediais</option>
+                        <option>Interfones e Vídeo Porteiros</option>
+                        <option>Redes Wireless</option>
+                        <option>Outros Assuntos</option>
+                    </select>
 
-            <button class="btn" type="submit">
-                Solicitar Orçamento
-            </button>
-        </form>
+                    <textarea rows="4" id="mensagem"
+                        placeholder="Descreva sua necessidade ou outros detalhes importantes"></textarea>
+
+                    <button class="btn" type="submit">
+                        Solicitar Orçamento
+                    </button>
+                </form>
+            </section>
+
+            <footer class="footer footer-transparent">
+                <p>© 2025 DR Tecnologia — Todos os direitos reservados.</p>
+            </footer>
+        </div>
     </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <p>© 2025 DR Tecnologia — Todos os direitos reservados.</p>
-    </footer>
 
     <script src="js/validacao-form.js"></script>
     <script src="js/whatsapp.js"></script>

@@ -1,71 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <title>Sobre Nós - DR Tecnologia</title>
-    
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3BP31KQYPR"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-3BP31KQYPR');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-3BP31KQYPR');
     </script>
 
-    
+
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header class="header">
+    <header class="header header-transparent">
         <div class="container">
-            <a href="index.html" class="logo">DR Tecnologia</a>
+            <a href="index.html" class="logo">
+                <span class="logo-full">DR Tecnologia</span>
+                <span class="logo-short">DR</span>
+            </a>
 
             <nav class="nav">
                 <ul>
-                    <a href="index.html">Início</a>
-                    <a href="servicos.html">Serviços</a>
-                    <a href="sobre.html">Sobre</a>
-                    <a href="contato.html">Contato</a>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="sobre container">
-        <h2>Sobre a Empresa</h2>
+    <section class="hero-video">
+        <video autoplay muted loop playsinline>
+            <source src="videos/background_movel.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
 
-        <p>
-            A DR Tecnologia é uma empresa que iniciou suas atividades em 2025, formada pela união de profissionais com 
-            mais de 10 anos de experiência na área de tecnologia e segurança eletrônica.
-        </p>     
+        <div class="hero-content">
+            <section class="sobre container">
+                <h2>Sobre a Empresa</h2>
 
-        <p>
-            Atuamos na instalação e manutenção de câmeras de segurança, redes estruturadas, interfones, vídeo porteiros 
-            e redes wireless, oferecendo soluções completas para residências, comércios e empresas.
-        </p>
+                <p style="margin-bottom: 20px;">
+                    A DR Tecnologia é uma empresa que iniciou suas atividades em 2025, formada pela união de
+                    profissionais com
+                    mais de 10 anos de experiência na área de tecnologia e segurança eletrônica.
+                </p>
 
-        <p>
-            Mesmo sendo uma empresa recente, carregamos uma bagagem sólida de conhecimento técnico, 
-            adquirida ao longo de anos de atuação no setor. Nosso compromisso é entregar serviços com qualidade, 
-            confiabilidade e organização, utilizando boas práticas, equipamentos adequados e tecnologia atualizada.
-        </p>
+                <p style="margin-bottom: 20px;">
+                    Atuamos na instalação e manutenção de câmeras de segurança, redes estruturadas, interfones, vídeo
+                    porteiros
+                    e redes wireless, oferecendo soluções completas para residências, comércios e empresas.
+                </p>
 
-        <p>
-            A DR Tecnologia nasce com o propósito de conectar, proteger e trazer tranquilidade aos nossos clientes, 
-            sempre com atendimento próximo, transparente e soluções sob medida.
-        </p>  
+                <p style="margin-bottom: 20px;">
+                    Mesmo sendo uma empresa recente, carregamos uma bagagem sólida de conhecimento técnico,
+                    adquirida ao longo de anos de atuação no setor. Nosso compromisso é entregar serviços com qualidade,
+                    confiabilidade e organização, utilizando boas práticas, equipamentos adequados e tecnologia
+                    atualizada.
+                </p>
 
-        <p>
-            <strong>DR Tecnologia — experiência que gera confiança, tecnologia que entrega resultados.</strong>
-        </p>
+                <p style="margin-bottom: 20px;">
+                    A DR Tecnologia nasce com o propósito de conectar, proteger e trazer tranquilidade aos nossos
+                    clientes,
+                    sempre com atendimento próximo, transparente e soluções sob medida.
+                </p>
 
+                <p style="margin-bottom: 40px;">
+                    <strong>DR Tecnologia — experiência que gera confiança, tecnologia que entrega resultados.</strong>
+                </p>
+
+                <!-- Carousel -->
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        <img src="img/switch_rack.png" alt="Switches e Rack de Rede" class="carousel-slide">
+                        <img src="img/cftv_cameras.png" alt="Câmeras de Segurança CFTV" class="carousel-slide">
+                        <img src="img/data_center.png" alt="Infraestrutura de Data Center" class="carousel-slide">
+                    </div>
+                    <button class="carousel-btn prev-btn" id="prevBtn">&#10094;</button>
+                    <button class="carousel-btn next-btn" id="nextBtn">&#10095;</button>
+                </div>
+            </section>
+
+            <footer class="footer footer-transparent">
+                <p>© 2025 DR Tecnologia — Todos os direitos reservados.</p>
+            </footer>
+        </div>
     </section>
-        <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <p>© 2025 DR Tecnologia — Todos os direitos reservados.</p>
-    </footer>
+
+    <script src="js/carousel.js"></script>
 </body>
+
 </html>
