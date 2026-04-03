@@ -51,6 +51,15 @@ body {
     color: #ffffff;
     white-space: nowrap;
     /*impede de quebrar linha */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 35px;
+    width: auto;
+    object-fit: contain;
 }
 
 .nav ul {
